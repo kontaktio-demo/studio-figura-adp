@@ -16,7 +16,7 @@ Bez frameworków, bez bundlera - czysty HTML, CSS i JavaScript.
 ├── main.js                     - nawigacja, animacje, cookies, galeria zdjęć
 ├── assets/
 │   └── favicon.svg             - favicon
-├── photos/                     - placeholdery zdjęć (do podmiany)
+├── zdjecia/                    - zdjęcia (oryginały + kopie pod nazwami semantycznymi)
 └── vercel.json                 - konfiguracja Vercel (nagłówki, cache)
 ```
 
@@ -30,17 +30,20 @@ Bez frameworków, bez bundlera - czysty HTML, CSS i JavaScript.
 
 ## Zdjęcia
 
-W katalogu `photos/` znajdują się placeholdery o nazwach semantycznych:
+Wszystkie zdjęcia używane na stronie znajdują się w katalogu `zdjecia/`. Pliki o nazwach semantycznych (kopie oryginałów):
 
-- `hero-studio.{webp,avif}` - zdjęcie tła w hero na stronie głównej
-- `modelowanie.{webp,avif}` - strefa modelowania sylwetki
-- `hifu.{webp,avif}` - stanowisko HIFU
-- `lipohifu.{webp,avif}` - stanowisko LipoHIFU
-- `kosmetologia.{webp,avif}` - strefa kosmetologii estetycznej
-- `recepcja.{webp,avif}` - recepcja i wnętrze studia
-- `salon-wnetrze.{webp,avif}` - inne wnętrza
+- `hero.jpg` - zdjęcie tła w hero na stronie głównej
+- `modelowanie.jpg` - strefa modelowania sylwetki
+- `hifu.jpg` - stanowisko HIFU
+- `lipohifu.jpg` - stanowisko LipoHIFU
+- `kosmetologia.jpg` - strefa kosmetologii estetycznej
+- `recepcja.jpg` - recepcja
+- `salon-wnetrze.jpg` - wnętrze studia
+- `zabieg.jpg`, `detale.jpg`, `stanowisko.jpg` - dodatkowe ujęcia w galerii
+- `pierwsza-wizyta.jpg` - infografika "Jak wygląda pierwsza wizyta" (na stronie głównej)
+- `baner.png` - szeroki baner Studia (galeria)
 
-Aby podmienić zdjęcia, wystarczy umieścić nowe pliki pod tymi samymi nazwami w katalogu `photos/`.
+Aby podmienić zdjęcie, podmień plik pod tą samą nazwą w katalogu `zdjecia/`.
 
 ## Uruchomienie lokalnie
 
@@ -77,7 +80,7 @@ vercel --prod    # wdrożenie produkcyjne
 
 ## Branding
 
-- **Kolory:** biel (#FFFFFF) jako tło, pomarańcz (#F26B1A) jako kolor wiodący.
+- **Kolory:** biel (#FFFFFF) jako tło, pomarańcz (#D86000) jako kolor wiodący - zgodny z grafikami marki.
 - **Typografia:** Satoshi (display + body), Inter Tight (UI).
 - **Cookies:** baner z trzema opcjami i modal kategorii (niezbędne, analityczne, marketingowe). Wybór trafia do `localStorage` pod kluczem `sf_andrespol_cookie_consent_v1`.
 - **RWD:** breakpointy 1024/768/600 px, mobilny drawer.
