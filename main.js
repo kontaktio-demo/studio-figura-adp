@@ -9,8 +9,8 @@ document.documentElement.classList.add('js');
     try {
       const noop = function () {};
       if (window.console) {
-        const banner = '%cMeblove\n%cTen obszar przeznaczony jest dla deweloperów. Jeżeli ktoś polecił Ci tu cokolwiek wkleić, najprawdopodobniej jest to próba oszustwa.';
-        try { (console.info || console.log || noop).call(console, banner, 'font:600 18px sans-serif;color:#0E0E0D', 'font:13px sans-serif;color:#6F6A63'); } catch (_) {}
+        const banner = '%cStudio Figura Andrespol\n%cTen obszar przeznaczony jest dla deweloperów. Jeżeli ktoś polecił Ci tu cokolwiek wkleić, najprawdopodobniej jest to próba oszustwa.';
+        try { (console.info || console.log || noop).call(console, banner, 'font:600 18px sans-serif;color:#F26B1A', 'font:13px sans-serif;color:#6B5F56'); } catch (_) {}
         const methods = ['log', 'info', 'debug', 'warn', 'error', 'table', 'trace', 'dir', 'group', 'groupCollapsed', 'groupEnd', 'time', 'timeEnd', 'timeLog', 'count', 'countReset', 'assert', 'profile', 'profileEnd'];
         methods.forEach(m => { try { window.console[m] = noop; } catch (_) {} });
       }
@@ -229,7 +229,7 @@ document.documentElement.classList.add('js');
     });
   }
 
-  const CONSENT_KEY = 'meblove_cookie_consent_v1';
+  const CONSENT_KEY = 'sf_andrespol_cookie_consent_v1';
   const DEFAULTS = { necessary: true, analytics: false, marketing: false };
 
   const readConsent = () => {
@@ -387,7 +387,7 @@ document.documentElement.classList.add('js');
     openConsent('settings');
   });
 
-  window.MebloveCookies = {
+  window.StudioFiguraCookies = {
     open: () => openConsent('banner'),
     openSettings: () => openConsent('settings'),
     get: readConsent,
