@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Meblove">
-  <rect width="64" height="64" rx="12" fill="#3B2A23"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Studio Figura Andrespol">
+  <rect width="64" height="64" rx="12" fill="#F26B1A"/>
   <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
         font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
-        font-weight="600" font-size="40" fill="#F5F0EA">M</text>
-  <circle cx="49" cy="46" r="3.2" fill="#D9C7B3"/>
+        font-weight="600" font-size="40" fill="#FFFFFF">S</text>
+  <circle cx="49" cy="46" r="3.2" fill="#FFFFFF"/>
 </svg>
