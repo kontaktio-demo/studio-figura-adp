@@ -22,7 +22,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="preload" as="image" href="zdjecia/hero.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="style.css" />
   <script type="application/ld+json">
   {
@@ -125,11 +124,8 @@
 
   <section class="hero">
     <div class="hero__media" aria-hidden="true">
-      <!-- ZDJĘCIE HERO: Aktualnie używamy zdjęcia z gabinetu (zdjecia/hero.jpg).
-           Jeśli właścicielka woli premium placeholder na prezentację, podmień src na jasne, ciepłe wnętrze typu spa
-           (Unsplash query: "luxury spa interior", "beauty clinic minimal", "aesthetic clinic pink") - format 1920x1080,
-           kompresja do max ~250kb (WebP + JPG fallback). Tony beżowo-różowe, NIE klinicznie białe. -->
-      <picture><img src="zdjecia/hero.jpg" alt="" loading="eager" fetchpriority="high" /></picture>
+      <!-- Hero zdjęcie zostało zastąpione tłem w marce (warm brown / champagne)
+           ustawionym w CSS na .hero - widoczne natychmiast po wejściu na stronę. -->
     </div>
     <div class="container">
       <div class="hero__inner">
@@ -165,7 +161,7 @@
              Format: 1200px szerokości, kompresja max ~150kb, dodaj WebP + JPG fallback. -->
         <a class="service-tile reveal" href="oferta.html#modelowanie" aria-label="Modelowanie sylwetki - zobacz ofertę">
           <div class="service-tile__media">
-            <picture><img src="zdjecia/modelowanie.jpg" alt="Strefa modelowania sylwetki w Studio Figura Andrespol" loading="eager" decoding="async" /></picture>
+            <picture><img src="assets/placeholder.svg" alt="Strefa modelowania sylwetki w Studio Figura Andrespol" loading="eager" decoding="async" /></picture>
           </div>
           <span class="service-tile__overlay" aria-hidden="true"></span>
           <span class="service-tile__arrow" aria-hidden="true"></span>
@@ -178,7 +174,7 @@
 
         <a class="service-tile reveal delay-1" href="oferta.html#hifu" aria-label="HIFU - lifting bez skalpela - zobacz ofertę">
           <div class="service-tile__media">
-            <picture><img src="zdjecia/hifu.jpg" alt="HIFU - nieinwazyjny lifting twarzy w Studio Figura Andrespol" loading="eager" decoding="async" /></picture>
+            <picture><img src="assets/placeholder.svg" alt="HIFU - nieinwazyjny lifting twarzy w Studio Figura Andrespol" loading="eager" decoding="async" /></picture>
           </div>
           <span class="service-tile__overlay" aria-hidden="true"></span>
           <span class="service-tile__arrow" aria-hidden="true"></span>
@@ -191,7 +187,7 @@
 
         <a class="service-tile reveal delay-2" href="oferta.html#lipohifu" aria-label="LipoHIFU - redukcja tkanki tłuszczowej - zobacz ofertę">
           <div class="service-tile__media">
-            <picture><img src="zdjecia/lipohifu.jpg" alt="LipoHIFU - nieinwazyjna redukcja tkanki tłuszczowej" loading="eager" decoding="async" /></picture>
+            <picture><img src="assets/placeholder.svg" alt="LipoHIFU - nieinwazyjna redukcja tkanki tłuszczowej" loading="eager" decoding="async" /></picture>
           </div>
           <span class="service-tile__overlay" aria-hidden="true"></span>
           <span class="service-tile__arrow" aria-hidden="true"></span>
@@ -204,7 +200,7 @@
 
         <a class="service-tile reveal delay-3" href="oferta.html#kosmetologia" aria-label="Kosmetologia estetyczna - zobacz ofertę">
           <div class="service-tile__media">
-            <picture><img src="zdjecia/kosmetologia.jpg" alt="Zabiegi kosmetologii estetycznej w Studio Figura Andrespol" loading="eager" decoding="async" /></picture>
+            <picture><img src="assets/placeholder.svg" alt="Zabiegi kosmetologii estetycznej w Studio Figura Andrespol" loading="eager" decoding="async" /></picture>
           </div>
           <span class="service-tile__overlay" aria-hidden="true"></span>
           <span class="service-tile__arrow" aria-hidden="true"></span>
@@ -281,7 +277,7 @@
         <p class="lead">Cztery proste kroki - od krótkiej konsultacji po pierwsze efekty. Zero presji, zero ukrytych kosztów.</p>
       </div>
       <figure class="infographic reveal">
-        <img src="zdjecia/pierwsza-wizyta.jpg" alt="Infografika: cztery kroki pierwszej wizyty w Studio Figura Andrespol - konsultacja, analiza potrzeb, dobór zabiegów, pierwsze efekty" loading="lazy" decoding="async" />
+        <img src="assets/placeholder.svg" alt="Infografika: cztery kroki pierwszej wizyty w Studio Figura Andrespol - konsultacja, analiza potrzeb, dobór zabiegów, pierwsze efekty" loading="lazy" decoding="async" />
       </figure>
     </div>
   </section>
@@ -306,25 +302,25 @@
              Tony jasne, kobiece, ciepłe światło. -->
         <button type="button" class="tile reveal" data-lightbox data-alt="Recepcja Studio Figura Andrespol - jasne wnętrze" aria-label="Pokaż większe zdjęcie">
           <div class="tile__media">
-            <picture><img src="zdjecia/recepcja.jpg" alt="Recepcja Studio Figura Andrespol - jasne wnętrze" loading="lazy" decoding="async" /></picture>
+            <picture><img src="assets/placeholder.svg" alt="Recepcja Studio Figura Andrespol - jasne wnętrze" loading="lazy" decoding="async" /></picture>
           </div>
         </button>
 
         <button type="button" class="tile reveal delay-1" data-lightbox data-alt="Strefa modelowania sylwetki - urządzenia Studio Figura" aria-label="Pokaż większe zdjęcie">
           <div class="tile__media">
-            <picture><img src="zdjecia/salon-wnetrze.jpg" alt="Strefa modelowania sylwetki - urządzenia Studio Figura" loading="lazy" decoding="async" /></picture>
+            <picture><img src="assets/placeholder.svg" alt="Strefa modelowania sylwetki - urządzenia Studio Figura" loading="lazy" decoding="async" /></picture>
           </div>
         </button>
 
         <button type="button" class="tile reveal" data-lightbox data-alt="Stanowisko HIFU - nieinwazyjny lifting twarzy" aria-label="Pokaż większe zdjęcie">
           <div class="tile__media">
-            <picture><img src="zdjecia/stanowisko.jpg" alt="Stanowisko HIFU - nieinwazyjny lifting twarzy" loading="lazy" decoding="async" /></picture>
+            <picture><img src="assets/placeholder.svg" alt="Stanowisko HIFU - nieinwazyjny lifting twarzy" loading="lazy" decoding="async" /></picture>
           </div>
         </button>
 
         <button type="button" class="tile reveal delay-1" data-lightbox data-alt="Strefa kosmetologii estetycznej - zabiegi pielęgnacyjne" aria-label="Pokaż większe zdjęcie">
           <div class="tile__media">
-            <picture><img src="zdjecia/zabieg.jpg" alt="Strefa kosmetologii estetycznej - zabiegi pielęgnacyjne" loading="lazy" decoding="async" /></picture>
+            <picture><img src="assets/placeholder.svg" alt="Strefa kosmetologii estetycznej - zabiegi pielęgnacyjne" loading="lazy" decoding="async" /></picture>
           </div>
         </button>
       </div>
