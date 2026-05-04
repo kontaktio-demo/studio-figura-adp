@@ -818,7 +818,7 @@ p { color: var(--text-primary); }
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(120% 80% at 100% 0%, rgba(232, 180, 160, 0.18) 0%, transparent 60%);
+  background: radial-gradient(120% 80% at 100% 0%, rgba(232, 180, 160, 0.14) 0%, transparent 60%);
   pointer-events: none;
 }
 .cta-banner > * { position: relative; z-index: 1; }
