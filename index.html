@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studio Figura Andrespol | Modelowanie sylwetki, HIFU, kosmetologia estetyczna</title>
   <meta name="description" content="Studio Figura Andrespol - nowoczesny gabinet łączący fitness, wellness i kosmetologię estetyczną. Zabiegi odmładzające, ujędrniające i wyszczuplające - HIFU, LipoHIFU, modelowanie sylwetki." />
-  <meta name="theme-color" content="#F26B1A" />
+  <meta name="theme-color" content="#C9A57B" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pl_PL" />
   <meta property="og:site_name" content="Studio Figura Andrespol" />
@@ -18,11 +18,10 @@
   <meta property="og:image:alt" content="Wnętrze Studio Figura Andrespol - strefa zabiegowa" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://api.fontshare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="zdjecia/hero.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="style.css" />
   <script type="application/ld+json">
@@ -126,6 +125,10 @@
 
   <section class="hero">
     <div class="hero__media" aria-hidden="true">
+      <!-- ZDJĘCIE HERO: Aktualnie używamy zdjęcia z gabinetu (zdjecia/hero.jpg).
+           Jeśli właścicielka woli premium placeholder na prezentację, podmień src na jasne, ciepłe wnętrze typu spa
+           (Unsplash query: "luxury spa interior", "beauty clinic minimal", "aesthetic clinic pink") - format 1920x1080,
+           kompresja do max ~250kb (WebP + JPG fallback). Tony beżowo-różowe, NIE klinicznie białe. -->
       <picture><img src="zdjecia/hero.jpg" alt="" loading="eager" fetchpriority="high" /></picture>
     </div>
     <div class="container">
@@ -153,6 +156,13 @@
       </div>
 
       <div class="grid grid-4 grid--wide" data-img-sync>
+        <!-- ZDJĘCIA SEKCJI ZABIEGÓW: Aktualne pliki w /zdjecia/ to zdjęcia gabinetu.
+             Jeśli na prezentację potrzebny premium placeholder, podmień src na zdjęcia z Unsplash:
+             - Modelowanie: "body sculpting woman", "wellness massage roller" (NIE siłownia/mężczyźni)
+             - HIFU: "facial treatment", "face lifting woman" (NIE klinicznie/igły)
+             - LipoHIFU: "body contouring", "wellness woman silhouette"
+             - Kosmetologia: "skincare treatment", "facial mask spa"
+             Format: 1200px szerokości, kompresja max ~150kb, dodaj WebP + JPG fallback. -->
         <a class="service-tile reveal" href="oferta.html#modelowanie" aria-label="Modelowanie sylwetki - zobacz ofertę">
           <div class="service-tile__media">
             <picture><img src="zdjecia/modelowanie.jpg" alt="Strefa modelowania sylwetki w Studio Figura Andrespol" loading="eager" decoding="async" /></picture>
@@ -287,27 +297,34 @@
       </div>
 
       <div class="realizacje-grid">
+        <!-- ZDJĘCIA WNĘTRZA: Aktualne pliki w /zdjecia/ to zdjęcia gabinetu.
+             Premium placeholdery z Unsplash do podmiany jeśli potrzebne na prezentację:
+             - recepcja: "spa reception", "boutique reception"
+             - salon-wnetrze: "wellness studio", "spa interior pink"
+             - stanowisko: "treatment room", "aesthetic clinic room"
+             - zabieg: "cosmetology room", "facial treatment room"
+             Tony jasne, kobiece, ciepłe światło. -->
         <button type="button" class="tile reveal" data-lightbox data-alt="Recepcja Studio Figura Andrespol - jasne wnętrze" aria-label="Pokaż większe zdjęcie">
           <div class="tile__media">
-            <picture><img src="zdjecia/recepcja.jpg" alt="Recepcja Studio Figura Andrespol - jasne wnętrze" loading="eager" decoding="async" /></picture>
+            <picture><img src="zdjecia/recepcja.jpg" alt="Recepcja Studio Figura Andrespol - jasne wnętrze" loading="lazy" decoding="async" /></picture>
           </div>
         </button>
 
         <button type="button" class="tile reveal delay-1" data-lightbox data-alt="Strefa modelowania sylwetki - urządzenia Studio Figura" aria-label="Pokaż większe zdjęcie">
           <div class="tile__media">
-            <picture><img src="zdjecia/salon-wnetrze.jpg" alt="Strefa modelowania sylwetki - urządzenia Studio Figura" loading="eager" decoding="async" /></picture>
+            <picture><img src="zdjecia/salon-wnetrze.jpg" alt="Strefa modelowania sylwetki - urządzenia Studio Figura" loading="lazy" decoding="async" /></picture>
           </div>
         </button>
 
         <button type="button" class="tile reveal" data-lightbox data-alt="Stanowisko HIFU - nieinwazyjny lifting twarzy" aria-label="Pokaż większe zdjęcie">
           <div class="tile__media">
-            <picture><img src="zdjecia/stanowisko.jpg" alt="Stanowisko HIFU - nieinwazyjny lifting twarzy" loading="eager" decoding="async" /></picture>
+            <picture><img src="zdjecia/stanowisko.jpg" alt="Stanowisko HIFU - nieinwazyjny lifting twarzy" loading="lazy" decoding="async" /></picture>
           </div>
         </button>
 
         <button type="button" class="tile reveal delay-1" data-lightbox data-alt="Strefa kosmetologii estetycznej - zabiegi pielęgnacyjne" aria-label="Pokaż większe zdjęcie">
           <div class="tile__media">
-            <picture><img src="zdjecia/zabieg.jpg" alt="Strefa kosmetologii estetycznej - zabiegi pielęgnacyjne" loading="eager" decoding="async" /></picture>
+            <picture><img src="zdjecia/zabieg.jpg" alt="Strefa kosmetologii estetycznej - zabiegi pielęgnacyjne" loading="lazy" decoding="async" /></picture>
           </div>
         </button>
       </div>
