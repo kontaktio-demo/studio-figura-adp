@@ -447,6 +447,11 @@ p { color: var(--text-primary); }
   overflow: hidden;
   margin-top: calc(-1 * var(--nav-h));
   padding-top: var(--nav-h);
+  /* Warm brand-color backdrop shown immediately on page load
+     (replaces the previous hero photo). */
+  background:
+    radial-gradient(120% 80% at 20% 10%, rgba(201,165,123,0.35) 0%, rgba(201,165,123,0) 60%),
+    linear-gradient(135deg, #8B5E3C 0%, #5A3A28 45%, #2C1F1A 100%);
 }
 .hero__media,
 .hero__media picture,
@@ -593,6 +598,7 @@ p { color: var(--text-primary); }
 .service-tile__media {
   aspect-ratio: 4 / 5;
   overflow: hidden;
+  background: var(--beige-soft);
 }
 .service-tile__media picture,
 .service-tile__media img {
@@ -762,6 +768,7 @@ p { color: var(--text-primary); }
 .tile__media {
   aspect-ratio: 16 / 10;
   overflow: hidden;
+  background: var(--beige-soft);
 }
 .tile--portrait .tile__media { aspect-ratio: 4 / 5; }
 .tile--wide    .tile__media { aspect-ratio: 16 / 9; }
