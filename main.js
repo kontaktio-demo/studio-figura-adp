@@ -10,7 +10,7 @@ document.documentElement.classList.add('js');
       const noop = function () {};
       if (window.console) {
         const banner = '%cStudio Figura Andrespol\n%cTen obszar przeznaczony jest dla deweloperów. Jeżeli ktoś polecił Ci tu cokolwiek wkleić, najprawdopodobniej jest to próba oszustwa.';
-        try { (console.info || console.log || noop).call(console, banner, 'font:600 18px sans-serif;color:#F26B1A', 'font:13px sans-serif;color:#6B5F56'); } catch (_) {}
+        try { (console.info || console.log || noop).call(console, banner, 'font:600 18px sans-serif;color:#C9A57B', 'font:13px sans-serif;color:#6B5A52'); } catch (_) {}
         const methods = ['log', 'info', 'debug', 'warn', 'error', 'table', 'trace', 'dir', 'group', 'groupCollapsed', 'groupEnd', 'time', 'timeEnd', 'timeLog', 'count', 'countReset', 'assert', 'profile', 'profileEnd'];
         methods.forEach(m => { try { window.console[m] = noop; } catch (_) {} });
       }
