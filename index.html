@@ -124,21 +124,30 @@
 
   <section class="hero">
     <div class="hero__media" aria-hidden="true">
-      <!-- Hero zdjęcie zostało zastąpione tłem w marce (warm brown / champagne)
-           ustawionym w CSS na .hero - widoczne natychmiast po wejściu na stronę. -->
+      <!-- Animated brand backdrop (no photo) - warm gradient, decorative orbs and noise overlay. -->
+      <span class="hero__orb hero__orb--a"></span>
+      <span class="hero__orb hero__orb--b"></span>
+      <span class="hero__orb hero__orb--c"></span>
+      <span class="hero__shine"></span>
+      <span class="hero__grain"></span>
     </div>
     <div class="container">
       <div class="hero__inner">
-        <span class="eyebrow hero__eyebrow reveal">Studio Figura - Andrespol</span>
-        <h1 class="reveal delay-1">Fitness, wellness<br/>i kosmetologia estetyczna.</h1>
-        <p class="reveal delay-2">Nowoczesny gabinet w Wiśniowej Górze pod Andrespolem. Specjalizujemy się w zabiegach odmładzających, ujędrniających i wyszczuplających - pomagamy osiągać efekty bez wysiłku i wyrzeczeń.</p>
+        <span class="eyebrow hero__eyebrow reveal">Studio Figura, Andrespol</span>
+        <h1 class="reveal delay-1">Sylwetka, skóra<br/>i pewność siebie<br/><em>w jednym miejscu.</em></h1>
+        <p class="reveal delay-2">Kameralny gabinet w Wiśniowej Górze pod Łodzią. Łączymy modelowanie sylwetki, nieinwazyjny lifting HIFU i kosmetologię estetyczną w jednym, dobrze przemyślanym planie. Bez presji, bez gotowych pakietów, bez katowania się na siłowni.</p>
         <div class="hero__cta reveal delay-3">
           <a class="btn btn--light btn--lg" href="oferta.html">Zobacz zabiegi</a>
-          <a class="btn btn--ghost btn--lg" href="kontakt.html">Umów wizytę</a>
+          <a class="btn btn--ghost btn--lg" href="kontakt.html">Umów konsultację</a>
         </div>
+        <ul class="hero__meta reveal delay-3" aria-label="Krótkie fakty o studiu">
+          <li><strong>500+</strong><span>zadowolonych klientek</span></li>
+          <li><strong>7 lat</strong><span>doświadczenia w branży</span></li>
+          <li><strong>4</strong><span>autorskie ścieżki zabiegów</span></li>
+        </ul>
       </div>
     </div>
-    <span class="hero__scroll" aria-hidden="true">Scroll</span>
+    <span class="hero__scroll" aria-hidden="true">Przewiń</span>
   </section>
 
   <section class="section" id="zabiegi">
@@ -146,68 +155,87 @@
       <div class="section__head section__head--split reveal">
         <div>
           <span class="eyebrow">Co robimy</span>
-          <h2>Zabiegi, które dbają o ciało i dobre samopoczucie</h2>
+          <h2>Cztery ścieżki, jeden wspólny cel: <em>czuć się dobrze we własnym ciele.</em></h2>
         </div>
-        <p class="lead">Łączymy modelowanie sylwetki, nieinwazyjne zabiegi ujędrniające i kosmetologię estetyczną. Każda wizyta zaczyna się od rozmowy o celu - reszta to nasza praca.</p>
+        <p class="lead">Modelowanie sylwetki, nieinwazyjny lifting i kosmetologia estetyczna. Każda wizyta zaczyna się od rozmowy o Twoich oczekiwaniach. Reszta to nasza praca.</p>
       </div>
 
-      <div class="grid grid-4 grid--wide" data-img-sync>
-        <!-- ZDJĘCIA SEKCJI ZABIEGÓW: Aktualne pliki w /zdjecia/ to zdjęcia gabinetu.
-             Jeśli na prezentację potrzebny premium placeholder, podmień src na zdjęcia z Unsplash:
-             - Modelowanie: "body sculpting woman", "wellness massage roller" (NIE siłownia/mężczyźni)
-             - HIFU: "facial treatment", "face lifting woman" (NIE klinicznie/igły)
-             - LipoHIFU: "body contouring", "wellness woman silhouette"
-             - Kosmetologia: "skincare treatment", "facial mask spa"
-             Format: 1200px szerokości, kompresja max ~150kb, dodaj WebP + JPG fallback. -->
-        <a class="service-tile reveal" href="oferta.html#modelowanie" aria-label="Modelowanie sylwetki - zobacz ofertę">
-          <div class="service-tile__media">
-            <picture><img src="assets/placeholder.svg" alt="Strefa modelowania sylwetki w Studio Figura Andrespol" loading="eager" decoding="async" /></picture>
+      <div class="grid grid-4 grid--wide tiles-illustrated" data-img-sync>
+        <a class="service-tile service-tile--illus reveal" href="oferta.html#modelowanie" aria-label="Modelowanie sylwetki - zobacz ofertę">
+          <div class="service-tile__media service-tile__media--gradient" data-tone="sand" aria-hidden="true">
+            <span class="tile-illus__shape tile-illus__shape--blob"></span>
+            <span class="tile-illus__shape tile-illus__shape--ring"></span>
+            <svg class="tile-illus__icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M32 8c8 0 14 5 14 12 0 5-3 9-7 11l1 6c0 4-2 7-3 9l3 8h-16l3-8c-1-2-3-5-3-9l1-6c-4-2-7-6-7-11 0-7 6-12 14-12z"/>
+              <circle cx="32" cy="20" r="3"/>
+            </svg>
           </div>
           <span class="service-tile__overlay" aria-hidden="true"></span>
           <span class="service-tile__arrow" aria-hidden="true"></span>
           <div class="service-tile__body">
-            <span class="service-tile__num">01 - Sylwetka</span>
+            <span class="service-tile__num">01 / Sylwetka</span>
             <h3>Modelowanie sylwetki</h3>
-            <p>Trening na urządzeniach Studio Figura - efekty bez wysiłku i bez katowania się na siłowni.</p>
+            <p>Trening na urządzeniach Studio Figura, plus wsparcie nieinwazyjnymi zabiegami ujędrniającymi.</p>
           </div>
         </a>
 
-        <a class="service-tile reveal delay-1" href="oferta.html#hifu" aria-label="HIFU - lifting bez skalpela - zobacz ofertę">
-          <div class="service-tile__media">
-            <picture><img src="assets/placeholder.svg" alt="HIFU - nieinwazyjny lifting twarzy w Studio Figura Andrespol" loading="eager" decoding="async" /></picture>
+        <a class="service-tile service-tile--illus reveal delay-1" href="oferta.html#hifu" aria-label="HIFU - lifting bez skalpela - zobacz ofertę">
+          <div class="service-tile__media service-tile__media--gradient" data-tone="rose" aria-hidden="true">
+            <span class="tile-illus__shape tile-illus__shape--blob"></span>
+            <span class="tile-illus__shape tile-illus__shape--ring"></span>
+            <svg class="tile-illus__icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 14c-6 4-10 11-10 18 0 11 9 20 20 20s20-9 20-20c0-7-4-14-10-18"/>
+              <path d="M26 30c2-3 4-4 6-4s4 1 6 4"/>
+              <path d="M22 38c2 4 6 6 10 6s8-2 10-6"/>
+              <circle cx="26" cy="26" r="1.4" fill="currentColor"/>
+              <circle cx="38" cy="26" r="1.4" fill="currentColor"/>
+            </svg>
           </div>
           <span class="service-tile__overlay" aria-hidden="true"></span>
           <span class="service-tile__arrow" aria-hidden="true"></span>
           <div class="service-tile__body">
-            <span class="service-tile__num">02 - HIFU</span>
-            <h3>HIFU - lifting bez skalpela</h3>
-            <p>Skoncentrowane ultradźwięki ujędrniające skórę twarzy, szyi i dekoltu - bez rekonwalescencji.</p>
+            <span class="service-tile__num">02 / HIFU</span>
+            <h3>HIFU, lifting bez skalpela</h3>
+            <p>Skoncentrowane ultradźwięki ujędrniające skórę twarzy, szyi i dekoltu. Bez rekonwalescencji.</p>
           </div>
         </a>
 
-        <a class="service-tile reveal delay-2" href="oferta.html#lipohifu" aria-label="LipoHIFU - redukcja tkanki tłuszczowej - zobacz ofertę">
-          <div class="service-tile__media">
-            <picture><img src="assets/placeholder.svg" alt="LipoHIFU - nieinwazyjna redukcja tkanki tłuszczowej" loading="eager" decoding="async" /></picture>
+        <a class="service-tile service-tile--illus reveal delay-2" href="oferta.html#lipohifu" aria-label="LipoHIFU - redukcja tkanki tłuszczowej - zobacz ofertę">
+          <div class="service-tile__media service-tile__media--gradient" data-tone="champagne" aria-hidden="true">
+            <span class="tile-illus__shape tile-illus__shape--blob"></span>
+            <span class="tile-illus__shape tile-illus__shape--ring"></span>
+            <svg class="tile-illus__icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M32 6c10 0 18 8 18 18 0 12-12 22-18 32C26 46 14 36 14 24 14 14 22 6 32 6z"/>
+              <path d="M24 26c2-3 5-5 8-5s6 2 8 5"/>
+              <path d="M22 34c3 4 7 6 10 6s7-2 10-6"/>
+            </svg>
           </div>
           <span class="service-tile__overlay" aria-hidden="true"></span>
           <span class="service-tile__arrow" aria-hidden="true"></span>
           <div class="service-tile__body">
-            <span class="service-tile__num">03 - LipoHIFU</span>
+            <span class="service-tile__num">03 / LipoHIFU</span>
             <h3>LipoHIFU</h3>
             <p>Punktowa redukcja tkanki tłuszczowej i ujędrnienie skóry brzucha, ud i ramion.</p>
           </div>
         </a>
 
-        <a class="service-tile reveal delay-3" href="oferta.html#kosmetologia" aria-label="Kosmetologia estetyczna - zobacz ofertę">
-          <div class="service-tile__media">
-            <picture><img src="assets/placeholder.svg" alt="Zabiegi kosmetologii estetycznej w Studio Figura Andrespol" loading="eager" decoding="async" /></picture>
+        <a class="service-tile service-tile--illus reveal delay-3" href="oferta.html#kosmetologia" aria-label="Kosmetologia estetyczna - zobacz ofertę">
+          <div class="service-tile__media service-tile__media--gradient" data-tone="mocha" aria-hidden="true">
+            <span class="tile-illus__shape tile-illus__shape--blob"></span>
+            <span class="tile-illus__shape tile-illus__shape--ring"></span>
+            <svg class="tile-illus__icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 32c0-9 7-16 16-16s16 7 16 16c0 6-3 11-8 14l2 8H22l2-8c-5-3-8-8-8-14z"/>
+              <path d="M28 30h8"/>
+              <path d="M24 36h16"/>
+              <path d="M32 12v4M22 16l3 3M42 16l-3 3"/>
+            </svg>
           </div>
           <span class="service-tile__overlay" aria-hidden="true"></span>
           <span class="service-tile__arrow" aria-hidden="true"></span>
           <div class="service-tile__body">
-            <span class="service-tile__num">04 - Twarz</span>
+            <span class="service-tile__num">04 / Twarz</span>
             <h3>Kosmetologia estetyczna</h3>
-            <p>Zabiegi pielęgnacyjne, oczyszczające i odmładzające - dopasowane do potrzeb Twojej skóry.</p>
+            <p>Zabiegi pielęgnacyjne, oczyszczające i odmładzające, dopasowane do potrzeb Twojej skóry.</p>
           </div>
         </a>
       </div>
@@ -219,9 +247,9 @@
       <div class="section__head section__head--split reveal">
         <div>
           <span class="eyebrow">Jak wygląda wizyta</span>
-          <h2>Cztery spokojne kroki - od rozmowy do efektu</h2>
+          <h2>Cztery spokojne kroki, od rozmowy do efektu</h2>
         </div>
-        <p class="lead">Bez presji i bez sprzedażowych pakietów. Najpierw rozmawiamy o tym, na czym Ci zależy - dopiero potem dobieramy zabiegi.</p>
+        <p class="lead">Bez presji i bez sprzedażowych pakietów. Najpierw rozmawiamy o tym, na czym Ci zależy, dopiero potem dobieramy zabiegi.</p>
       </div>
 
       <div class="steps">
@@ -273,12 +301,46 @@
     <div class="container">
       <div class="section__head section__head--center reveal">
         <span class="eyebrow">W pigułce</span>
-        <h2>Jak wygląda pierwsza wizyta?</h2>
-        <p class="lead">Cztery proste kroki - od krótkiej konsultacji po pierwsze efekty. Zero presji, zero ukrytych kosztów.</p>
+        <h2>Jak wygląda pierwsza wizyta</h2>
+        <p class="lead">Cztery proste kroki, od krótkiej konsultacji po pierwsze efekty. Zero presji, zero ukrytych kosztów.</p>
       </div>
-      <figure class="infographic reveal">
-        <img src="assets/placeholder.svg" alt="Infografika: cztery kroki pierwszej wizyty w Studio Figura Andrespol - konsultacja, analiza potrzeb, dobór zabiegów, pierwsze efekty" loading="lazy" decoding="async" />
-      </figure>
+
+      <ol class="journey reveal" aria-label="Etapy pierwszej wizyty">
+        <li class="journey__step">
+          <span class="journey__num">01</span>
+          <h4>Krótka rozmowa</h4>
+          <p>Telefonicznie albo na miejscu, ustalamy cel i Twoje preferencje.</p>
+        </li>
+        <li class="journey__step">
+          <span class="journey__num">02</span>
+          <h4>Analiza i plan</h4>
+          <p>Dobieramy zabiegi pod Twoje potrzeby, pokazujemy realny czas i koszt.</p>
+        </li>
+        <li class="journey__step">
+          <span class="journey__num">03</span>
+          <h4>Pierwszy zabieg</h4>
+          <p>Komfortowe warunki, sprawdzony sprzęt, czas wyłącznie dla Ciebie.</p>
+        </li>
+        <li class="journey__step">
+          <span class="journey__num">04</span>
+          <h4>Efekty i kontrola</h4>
+          <p>Robimy pomiary, porównujemy zdjęcia i wspólnie planujemy kolejny krok.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--moodband" id="manifest" aria-label="Filozofia studia">
+    <div class="container">
+      <div class="moodband__inner reveal">
+        <span class="eyebrow">Nasza filozofia</span>
+        <p class="moodband__quote">
+          <em>Piękno bez presji.</em><br/>
+          Wierzymy, że dobre samopoczucie zaczyna się od rozmowy, a nie od cennika.
+          Każdy plan układamy tak, żebyś wracała z poczuciem ulgi, nie z listą rzeczy do nadrobienia.
+        </p>
+        <span class="moodband__sig">Zespół Studio Figura Andrespol</span>
+      </div>
     </div>
   </section>
 
@@ -287,42 +349,36 @@
       <div class="section__head section__head--split reveal">
         <div>
           <span class="eyebrow">Wnętrze studia</span>
-          <h2>Zajrzyj do naszego gabinetu</h2>
+          <h2>Spokojna, prywatna przestrzeń</h2>
         </div>
-        <p class="lead">Komfortowa, prywatna przestrzeń w Wiśniowej Górze pod Andrespolem - z dala od pośpiechu galerii handlowych.</p>
+        <p class="lead">Kameralny gabinet w Wiśniowej Górze pod Andrespolem, z dala od pośpiechu galerii handlowych. Każda wizyta tylko dla jednej osoby.</p>
       </div>
 
-      <div class="realizacje-grid">
-        <!-- ZDJĘCIA WNĘTRZA: Aktualne pliki w /zdjecia/ to zdjęcia gabinetu.
-             Premium placeholdery z Unsplash do podmiany jeśli potrzebne na prezentację:
-             - recepcja: "spa reception", "boutique reception"
-             - salon-wnetrze: "wellness studio", "spa interior pink"
-             - stanowisko: "treatment room", "aesthetic clinic room"
-             - zabieg: "cosmetology room", "facial treatment room"
-             Tony jasne, kobiece, ciepłe światło. -->
-        <button type="button" class="tile reveal" data-lightbox data-alt="Recepcja Studio Figura Andrespol - jasne wnętrze" aria-label="Pokaż większe zdjęcie">
-          <div class="tile__media">
-            <picture><img src="assets/placeholder.svg" alt="Recepcja Studio Figura Andrespol - jasne wnętrze" loading="lazy" decoding="async" /></picture>
-          </div>
-        </button>
-
-        <button type="button" class="tile reveal delay-1" data-lightbox data-alt="Strefa modelowania sylwetki - urządzenia Studio Figura" aria-label="Pokaż większe zdjęcie">
-          <div class="tile__media">
-            <picture><img src="assets/placeholder.svg" alt="Strefa modelowania sylwetki - urządzenia Studio Figura" loading="lazy" decoding="async" /></picture>
-          </div>
-        </button>
-
-        <button type="button" class="tile reveal" data-lightbox data-alt="Stanowisko HIFU - nieinwazyjny lifting twarzy" aria-label="Pokaż większe zdjęcie">
-          <div class="tile__media">
-            <picture><img src="assets/placeholder.svg" alt="Stanowisko HIFU - nieinwazyjny lifting twarzy" loading="lazy" decoding="async" /></picture>
-          </div>
-        </button>
-
-        <button type="button" class="tile reveal delay-1" data-lightbox data-alt="Strefa kosmetologii estetycznej - zabiegi pielęgnacyjne" aria-label="Pokaż większe zdjęcie">
-          <div class="tile__media">
-            <picture><img src="assets/placeholder.svg" alt="Strefa kosmetologii estetycznej - zabiegi pielęgnacyjne" loading="lazy" decoding="async" /></picture>
-          </div>
-        </button>
+      <div class="brand-grid reveal">
+        <article class="brand-card brand-card--lg" data-tone="mocha">
+          <span class="brand-card__chip">Atmosfera</span>
+          <h3>Cisza, ciepłe światło, zapach świeżego lnu</h3>
+          <p>Wnętrze utrzymane w neutralnych, ciepłych tonach. Bez klinicznej bieli, za to z miękkimi tkaninami i muzyką dobraną pod zabieg.</p>
+          <span class="brand-card__deco" aria-hidden="true"></span>
+        </article>
+        <article class="brand-card" data-tone="sand">
+          <span class="brand-card__chip">Sprzęt</span>
+          <h3>Certyfikowane urządzenia</h3>
+          <p>HIFU, LipoHIFU i platformy Studio Figura, regularnie serwisowane.</p>
+          <span class="brand-card__deco" aria-hidden="true"></span>
+        </article>
+        <article class="brand-card" data-tone="rose">
+          <span class="brand-card__chip">Komfort</span>
+          <h3>Jedna klientka na godzinę</h3>
+          <p>Bez tłumu w poczekalni i bez pośpiechu, czas tylko dla Ciebie.</p>
+          <span class="brand-card__deco" aria-hidden="true"></span>
+        </article>
+        <article class="brand-card" data-tone="champagne">
+          <span class="brand-card__chip">Lokalizacja</span>
+          <h3>Tuszyńska 107a, Wiśniowa Góra</h3>
+          <p>Łatwy dojazd z Łodzi, Andrespola i okolic, własny parking pod gabinetem.</p>
+          <span class="brand-card__deco" aria-hidden="true"></span>
+        </article>
       </div>
 
       <div class="text-center mt-xl reveal">
@@ -370,10 +426,10 @@
     <div class="container">
       <div class="cta-banner reveal">
         <div>
-          <h2>Chcesz porozmawiać o swoim celu?</h2>
-          <p>Napisz lub zadzwoń. Pierwsza rozmowa jest bezpłatna - opowiesz, na czym Ci zależy, a my podpowiemy, od czego zacząć i czy w ogóle warto.</p>
+          <h2>Porozmawiajmy o Twoim celu</h2>
+          <p>Pierwsza rozmowa jest bezpłatna. Opowiesz, na czym Ci zależy, a my podpowiemy, od czego zacząć i czy w ogóle warto. Bez sprzedażowych formułek i bez gotowych pakietów.</p>
         </div>
-        <a class="btn btn--light btn--lg" href="kontakt.html">Umów wizytę</a>
+        <a class="btn btn--light btn--lg" href="kontakt.html">Umów konsultację</a>
       </div>
     </div>
   </section>
@@ -425,5 +481,10 @@
   </footer>
 
   <script src="main.js" defer></script>
+  <script src="kontaktio.js" defer
+    data-kontaktio
+    data-client="sfa"
+    data-backend="https://chatbot-backend-x2cy.onrender.com"
+  ></script>
 </body>
 </html>

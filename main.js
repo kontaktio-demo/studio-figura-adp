@@ -141,10 +141,15 @@ document.documentElement.classList.add('js');
 
   const heroMedia = document.querySelector('.hero__media');
   if (heroMedia && !reduce) {
+    const orbs = heroMedia.querySelectorAll('.hero__orb');
     let ticking = false;
     const update = () => {
       const y = Math.min(window.scrollY, window.innerHeight);
       heroMedia.style.transform = 'translate3d(0,' + (y * 0.18) + 'px,0)';
+      orbs.forEach((orb, i) => {
+        const factor = 0.06 + i * 0.04;
+        orb.style.transform = 'translate3d(0,' + (y * factor) + 'px,0)';
+      });
       ticking = false;
     };
     window.addEventListener('scroll', () => {
