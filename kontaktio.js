@@ -264,6 +264,17 @@
     const CLIENT_ID = script.getAttribute("data-client") || "demo";
     const BACKEND = script.getAttribute("data-backend") || "";
     const baseUrl = BACKEND.replace(/\/+$/, "");
+    const THEME_OVERRIDE = (() => {
+      const raw = script.getAttribute("data-theme");
+      if (!raw) return null;
+      try {
+        const parsed = JSON.parse(raw);
+        return parsed && typeof parsed === "object" ? parsed : null;
+      } catch (e) {
+        console.warn("[Kontaktio] Invalid data-theme JSON:", e);
+        return null;
+      }
+    })();
     if (!baseUrl) {
       console.error("[Kontaktio] Missing data-backend on script tag");
       return;
@@ -332,7 +343,11 @@
         throw new Error(`Config error ${res.status}: ${txt}`);
       }
       const data = await res.json();
-      return normalizeClient(data);
+      const normalized = normalizeClient(data);
+      if (THEME_OVERRIDE) {
+        normalized.theme = { ...normalized.theme, ...THEME_OVERRIDE };
+      }
+      return normalized;
     };
     const rootId = `kontaktio-root-${CLIENT_ID}-${idx}`;
     const launcherId = `kontaktio-launcher-${CLIENT_ID}-${idx}`;
