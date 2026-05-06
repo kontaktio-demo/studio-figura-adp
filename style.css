@@ -1578,44 +1578,71 @@ p { color: var(--text-primary); }
 .tile-illus__shape--blob {
   width: 70%;
   aspect-ratio: 1;
-  top: -18%;
-  right: -22%;
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 65%);
+  top: -22%;
+  right: -24%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 65%);
   animation: tileFloat 9s ease-in-out infinite alternate;
 }
 .tile-illus__shape--ring {
-  width: 50%;
+  width: 42%;
   aspect-ratio: 1;
-  bottom: -20%;
-  left: -18%;
+  top: -14%;
+  right: -10%;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.28);
   filter: blur(0);
-  opacity: 0.55;
+  opacity: 0.5;
   animation: tileFloat 11s ease-in-out infinite alternate-reverse;
 }
 @keyframes tileFloat {
   from { transform: translate(0,0) scale(1); }
-  to   { transform: translate(8px, -8px) scale(1.06); }
+  to   { transform: translate(6px, -6px) scale(1.04); }
 }
 .tile-illus__icon {
   position: absolute;
-  width: 38%;
-  max-width: 120px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -55%);
+  width: 56px;
+  height: 56px;
+  top: clamp(18px, 2.4vw, 28px);
+  left: clamp(20px, 2.4vw, 32px);
   color: currentColor;
-  opacity: 0.95;
-  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+  opacity: 0.7;
+  stroke-width: 1.2;
+  transition: transform .6s cubic-bezier(.2,.7,.2,1), opacity var(--t);
 }
-.service-tile:hover .tile-illus__icon { transform: translate(-50%, -58%) scale(1.06); }
-.service-tile--illus p { display: block; color: rgba(250,247,242,0.82); font-size: 0.92rem; line-height: 1.55; max-width: 30ch; }
+.service-tile:hover .tile-illus__icon { transform: scale(1.06); opacity: 0.9; }
+.service-tile--illus .service-tile__body {
+  gap: 8px;
+}
+.service-tile--illus h3 {
+  font-size: clamp(1.25rem, 1.7vw, 1.65rem);
+  line-height: 1.18;
+}
+.service-tile--illus p {
+  color: rgba(250,247,242,0.82);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 32ch;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .service-tile--illus .service-tile__overlay {
-  background: linear-gradient(180deg, rgba(20,12,8,0) 30%, rgba(20,12,8,0.55) 100%);
+  background: linear-gradient(180deg, rgba(20,12,8,0) 25%, rgba(20,12,8,0.78) 100%);
 }
 .service-tile--illus:hover .service-tile__overlay {
-  background: linear-gradient(180deg, rgba(20,12,8,0.05) 0%, rgba(20,12,8,0.65) 100%);
+  background: linear-gradient(180deg, rgba(20,12,8,0.10) 0%, rgba(20,12,8,0.85) 100%);
+}
+
+/* Tablet: 2-column grid makes tiles narrower; tighten typography to keep
+   text inside the box and prevent overlap. */
+@media (max-width: 900px) {
+  .service-tile--illus h3 { font-size: 1.25rem; }
+  .service-tile--illus p { -webkit-line-clamp: 5; font-size: 0.88rem; }
+  .tile-illus__icon { width: 48px; height: 48px; opacity: 0.6; }
+}
+@media (max-width: 600px) {
+  .service-tile--illus p { -webkit-line-clamp: unset; max-width: 42ch; }
 }
 
 /* --- Journey (replaces infographic placeholder) ------------------------- */
