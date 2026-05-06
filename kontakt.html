@@ -78,11 +78,11 @@
 
       <div class="contact-grid">
 
-        <form class="form form--card reveal" action="mailto:sf.andrespol@gmail.com" method="post" enctype="multipart/form-data" novalidate>
+        <form class="form form--card reveal" action="mailto:sf.andrespol@gmail.com" method="post" novalidate>
           <div class="form__row">
             <div class="field">
-              <label for="name">Imię</label>
-              <input id="name" name="name" type="text" autocomplete="given-name" placeholder="np. Anna" required />
+              <label for="name">Imię i nazwisko</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="np. Anna Nowak" required />
             </div>
             <div class="field">
               <label for="email">E-mail</label>
@@ -94,37 +94,23 @@
             <div class="field">
               <label for="phone">Telefon</label>
               <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="np. 661 661 025" />
-              <span class="field__hint">Opcjonalnie - jeśli wolisz, żebyśmy oddzwonili.</span>
             </div>
             <div class="field">
-              <label for="city">Skąd jesteś?</label>
-              <input id="city" name="city" type="text" placeholder="np. Andrespol, Łódź-Widzew" />
-              <span class="field__hint">Pomoże nam dobrać dogodny termin.</span>
+              <label for="type">Temat</label>
+              <select id="type" name="type">
+                <option value="modelowanie">Strefa Fitness - modelowanie sylwetki</option>
+                <option value="lipohifu">Strefa Wellness - LipoHIFU, elektrostymulacja, limfodrenaż</option>
+                <option value="hifu">Kosmetologia Estetyczna - HIFU, lifting twarzy</option>
+                <option value="kosmetologia">Kosmetologia Estetyczna - mezoterapia, multipolar, oczyszczanie</option>
+                <option value="konsultacja">Pierwsza wizyta - konsultacja</option>
+                <option value="inne">Inne</option>
+              </select>
             </div>
           </div>
 
           <div class="field">
-            <label for="type">Czym jesteś zainteresowana?</label>
-            <select id="type" name="type">
-              <option value="modelowanie">Strefa Fitness - modelowanie sylwetki</option>
-              <option value="lipohifu">Strefa Wellness - LipoHIFU, elektrostymulacja, limfodrenaż</option>
-              <option value="hifu">Kosmetologia Estetyczna - HIFU, lifting twarzy</option>
-              <option value="kosmetologia">Kosmetologia Estetyczna - mezoterapia, multipolar, oczyszczanie</option>
-              <option value="konsultacja">Pierwsza wizyta - jeszcze nie wiem</option>
-              <option value="inne">Inne / kilka rzeczy naraz</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Opowiedz, na czym Ci zależy</label>
-            <textarea id="message" name="message" placeholder='Np. "Chciałabym popracować nad ujędrnieniem brzucha po ciąży i zmniejszeniem cellulitu na udach. Mam 35 lat, nie biorę żadnych leków."' required></textarea>
-            <span class="field__hint">Im więcej szczegółów, tym celniejszy plan metamorfozy zaproponujemy.</span>
-          </div>
-
-          <div class="field field--file">
-            <label for="files">Zdjęcia (opcjonalnie)</label>
-            <input id="files" name="files" type="file" multiple accept="image/*,.pdf" />
-            <span class="field__hint">Możesz dołączyć kilka zdjęć (do 10 MB łącznie). Zdjęcia z telefonu w zupełności wystarczą.</span>
+            <label for="message">Wiadomość</label>
+            <textarea id="message" name="message" placeholder="Napisz krótko, na czym Ci zależy - chętnie zaproponujemy plan dopasowany do Twoich potrzeb." required></textarea>
           </div>
 
           <div class="field field--consent">
@@ -135,7 +121,7 @@
           </div>
 
           <div class="form__submit">
-            <button type="submit" class="btn btn--primary btn--lg">Wyślij zapytanie</button>
+            <button type="submit" class="btn btn--primary btn--lg">Wyślij wiadomość</button>
             <span class="field__hint">Odpowiadamy zwykle w ciągu kilku godzin.</span>
           </div>
         </form>
