@@ -36,12 +36,11 @@ document.documentElement.classList.add('js');
     });
   }
 
-  const setNavHeight = () => {
-    const n = document.querySelector('.nav');
-    if (!n) return;
-    const h = n.offsetHeight;
-    if (h) document.documentElement.style.setProperty('--nav-h', h + 'px');
-  };
+  // NOTE: --nav-h is fully managed by CSS via media-query breakpoints
+  // (64px / 56px / 52px). We intentionally do NOT overwrite it from JS:
+  // reading `nav.offsetHeight` includes the 1px border-bottom and caused a
+  // +1px drift on every resize event (e.g. iOS Safari URL-bar toggle on
+  // tablets), making the nav grow taller after each refresh.
 
   const nav = document.querySelector('.nav');
   if (nav) {
@@ -84,10 +83,6 @@ document.documentElement.classList.add('js');
       if (page === path) a.classList.add('is-active');
     });
   }
-
-  setNavHeight();
-  window.addEventListener('resize', setNavHeight, { passive: true });
-  window.addEventListener('load', setNavHeight);
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const targets = document.querySelectorAll('.reveal');
